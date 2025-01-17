@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   containerImg: {
-    width: 200, // Chiều rộng cố định
-    height: 200, // Chiều cao cố định
-    resizeMode: 'cover', // Cách ảnh hiển thị
-    borderRadius: 10, // Bo tròn ảnh (tuỳ chọn)
+    width: 200, 
+    height: 200, 
+    resizeMode: 'cover', 
+    borderRadius: 10, 
   },
 });
 
