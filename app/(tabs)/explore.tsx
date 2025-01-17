@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, ScrollView, StyleSheet, TextInput, View, Alert} from 'react-native';
+import {Button, ScrollView, StyleSheet, TextInput, View, Alert, SafeAreaView} from 'react-native';
 
 export default function TabTwoScreen() {
   const [name, setName] = useState('');
@@ -44,35 +44,37 @@ export default function TabTwoScreen() {
 
 
   return (
-    <View style={styles.container}>
-      <TextInput
-        value={name}
-        onChangeText={setName}
-        placeholder="Nhập họ tên"
-        style={styles.tipStyle}
-      />
-      <TextInput
-        value={phone}
-        onChangeText={setPhone}
-        placeholder="Nhập số điện thoại"
-        keyboardType="phone-pad"
-        style={styles.tipStyle}
-      />
-      <TextInput
-        value={password}
-        onChangeText={setPassword}
-        placeholder="Nhập mật khẩu"
-        secureTextEntry={true}
-        style={styles.tipStyle}
-      />
-      <Button title="Lấy thông tin" onPress={handleSubmit} />
-    </View>
+    <SafeAreaView>
+        <View style={styles.container}>
+          <TextInput
+            value={name}
+            onChangeText={setName}
+            placeholder="Nhập họ tên"
+            style={styles.tipStyle}
+          />
+          <TextInput
+            value={phone}
+            onChangeText={setPhone}
+            placeholder="Nhập số điện thoại"
+            keyboardType="phone-pad"
+            style={styles.tipStyle}
+          />
+          <TextInput
+            value={password}
+            onChangeText={setPassword}
+            placeholder="Nhập mật khẩu"
+            secureTextEntry={true}
+            style={styles.tipStyle}
+          />
+          <Button title="Lấy thông tin" onPress={handleSubmit} />
+        </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     padding: 20,
     backgroundColor: '#f5f5f5',
   },

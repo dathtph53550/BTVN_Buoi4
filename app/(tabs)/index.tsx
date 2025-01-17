@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
   return (
+    <SafeAreaView>
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={[styles.text, styles.yellowText]}>
         Em vào đời bằng <Text style={styles.redText}>vang đỏ</Text> anh vào đời bằng <Text style={styles.blueText}>nước trà</Text>
@@ -35,6 +37,8 @@ export default function HomeScreen() {
         vắng anh
       </Text>
     </ScrollView>
+    </SafeAreaView>
+
   );
 }
 

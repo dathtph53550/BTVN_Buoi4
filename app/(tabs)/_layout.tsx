@@ -1,7 +1,6 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
-
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
@@ -40,6 +39,21 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="bai3"
+        options={{
+          title: 'Bai3',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="zipper.page" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="bai4"
+        options={{
+          title: 'Bai4',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="zipper.page" color={color} />,
+        }}
+      />
     </Tabs>
+    
   );
 }
